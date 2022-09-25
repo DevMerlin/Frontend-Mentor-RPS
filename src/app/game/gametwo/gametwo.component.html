@@ -1,0 +1,45 @@
+<div class="base">
+    <div><img  class="background" alt="Background - Pentagon" src="./../../../assets//images/bg-pentagon.svg" /></div>
+    <div 
+    [@clicked]="pick == 0 ? 'selected' : 'default'" 
+    (click)="triggerClick(0)" class="outertoken tokenScale abs outer-red rock">
+        <div class="front">
+            <div class="icon"><img alt="Rock" class="tokenImg" src="./../../../assets/images/icon-rock.svg"/></div>
+        </div>
+    </div>
+
+    <div 
+    [@clicked]="pick == 1 ? 'selected' : 'default'" 
+    (click)="triggerClick(1)" 
+    class="outertoken tokenScale abs outer-blue paper">
+        <div class="front">
+            <div class="icon"><img alt="Paper" class="tokenImg" src="./../../../assets/images/icon-paper.svg"/></div>
+        </div>
+    </div>
+
+    <div [@clicked]="pick == 2 ? 'selected' : 'default'"
+     (click)="triggerClick(2)"
+      class="outertoken tokenScale abs outer-yellow scissors">
+        <div class="front">
+            <div class="icon"><img alt="Scissors" class="tokenImg" src="./../../../assets/images/icon-scissors.svg"/></div>
+        </div>
+    </div> 
+    
+    <div 
+    [@clicked]="pick == 3 ? 'selected' : 'default'" 
+    (click)="triggerClick(3)" class="outertoken tokenScale abs outer-purple lizard">
+        <div class="front">
+            <div class="icon"><img alt="Lizard" class="tokenImg" src="./../../../assets/images/icon-lizard.svg"></div>
+        </div>
+    </div>     
+    
+    <div 
+    [@clicked]="pick == 4 ? 'selected' : 'default'" 
+    (click)="triggerClick(4)" alt="Spock" class="outertoken tokenScale abs outer-green spock">
+        <div class="front">
+            <div class="icon"><img class="tokenImg" src="./../../../assets/images/icon-spock.svg"></div>
+        </div>
+    </div> 
+    
+   
+</div>

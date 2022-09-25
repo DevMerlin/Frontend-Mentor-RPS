@@ -1,0 +1,6 @@
+<div class="gamebody" [ngClass]="game ? 'hn stNorm': 'hb stBon'">
+    <gameheader game={{game}} class="header"></gameheader>
+    <gameone *ngIf="game === 0"></gameone>
+    <gametwo *ngIf="game === 1"></gametwo>
+</div>
+<div class="stateCheck">{{output}}</div>

@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    cursor: pointer;
+}

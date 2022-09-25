@@ -1,0 +1,29 @@
+<div class="base">
+    <div><img  class="background"  alt="Background - Triangle" src="./../../../assets//images/bg-triangle.svg" /></div>
+    <div 
+    [@clicked]="pick == 0 ? 'selected' : 'default'" 
+    (click)="triggerClick(0)" class="outertoken abs outer-red fist">
+        <div class="front">
+            <div class="icon"><img  alt="Rock" class="tokenImg" src="./../../../assets/images/icon-rock.svg"/></div>
+        </div>
+    </div> 
+
+    <div 
+    [@clicked]="pick == 1 ? 'selected' : 'default'" 
+    (click)="triggerClick(1)" 
+    class="outertoken abs outer-blue paper">
+        <div class="front">
+            <div class="icon"><img alt="Paper" class="tokenImg" src="./../../../assets/images/icon-paper.svg"/></div>
+        </div>
+    </div>
+
+    <div [@clicked]="pick == 2 ? 'selected' : 'default'"
+     (click)="triggerClick(2)"
+      class="outertoken abs outer-yellow scissors">
+        <div class="front">
+            <div class="icon"><img alt="Scissors" class="tokenImg" src="./../../../assets/images/icon-scissors.svg"/></div>
+        </div>
+    </div> 
+    
+    
+</div>

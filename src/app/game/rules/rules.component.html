@@ -1,0 +1,5 @@
+<div class="header"><span>RULES</span><div class="close" (click)="close()"><img alt="Close" src="./../../../assets/images/icon-close.svg"></div></div>
+<mat-dialog-content>
+    <img *ngIf="state === 0" alt="Scissors beats Paper, Paper beats Rock, Rock beats Scissors" class="img" src="./../../../assets/images/image-rules.svg">
+    <img *ngIf="state === 1" alt="Scissors beats Paper and Lizard, Paper beats Rock and Spock, Rock beats Scissors and Lizard, Lizard beats Spock and Paper, Spock beats Scissors and Rock" class="img"  src="./../../../assets/images/image-rules-bonus.svg">
+</mat-dialog-content>

@@ -1,0 +1,17 @@
+.attribution {
+    color: #FFF;
+}
+
+a {
+    color: #FFF;
+
+    &:visited {
+        color: rgb(175, 175, 175);
+    }
+}
+
+.rsize {
+    align-self: center;
+    margin-right: 20px;
+    width: 80px;
+}

@@ -1,0 +1,12 @@
+<div class="gamehead">
+
+    <img *ngIf="game == 0"  class="logo" alt="Rock Paper Scissors" src="./../../../assets/images/logo.svg"/> 
+    <img *ngIf="game == 1" class="logols" alt="Rock Paper Scissors Lizard Spock" src="./../../../assets/images/logo-bonus.svg"/>     
+
+    <div class="score">
+        <div class="scoreinner">
+            <p class="scoreblip">SCORE</p>
+            {{score}}
+        </div>
+    </div>
+</div>

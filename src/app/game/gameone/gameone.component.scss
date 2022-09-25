@@ -1,0 +1,58 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base {
+    position: relative;
+    margin-top: 95px;
+    width: 250px;
+}
+
+.field {
+    position: absolute;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+}
+
+.paper {
+    top: -55px;
+    right: 65%;
+}
+
+.scissors {
+    top: -55px;
+    left: 65%;
+}
+
+.fist {
+    top: calc(0% + 145px);
+    left: 23%;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 300px) {
+    .base {
+        position: relative;
+        margin-top: 95px;
+        width: 210px;
+    }
+
+    .paper {
+        top: -55px;
+        left: -30%;
+    }
+    
+    .scissors {
+        top: -55px;
+        left: 65%;
+    }
+    
+    .fist {
+        top: calc(0% + 145px);
+        left: 18%;
+    }
+}

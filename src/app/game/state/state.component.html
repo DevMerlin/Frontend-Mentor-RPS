@@ -1,0 +1,83 @@
+<div class="gamebody">
+    <gameheader game={{mode}} class="header"></gameheader>
+    <div class="wrapper">
+        <div class="slot left">
+            <div class="player">YOU PICKED</div><br>
+            <div class="background" *ngIf="winState == 1"></div>
+            <div class="token" *ngIf="playerPick === -1"></div>
+            <div class="outertoken outer-red scale"  *ngIf="playerPick == 0">
+                <div class="front">
+                    <div class="icon"><img alt="Rock" class="tokenImg" src="./../../../assets/images/icon-rock.svg"/></div>
+                </div>
+            </div>
+
+            <div class="outertoken outer-blue scale" *ngIf="playerPick == 1">
+                <div class="front">
+                    <div class="icon"><img alt="Paper" class="tokenImg" src="./../../../assets/images/icon-paper.svg"/></div>
+                </div>
+            </div>
+        
+            <div class="outertoken outer-yellow scale" *ngIf="playerPick == 2">
+                <div class="front">
+                    <div class="icon"><img alt="Scissors" class="tokenImg" src="./../../../assets/images/icon-scissors.svg"/></div>
+                </div>
+            </div> 
+
+            <div class="outertoken outer-purple scale" *ngIf="playerPick == 3">
+                <div class="front">
+                    <div class="icon"><img  alt="Lizard" class="tokenImg" src="./../../../assets/images/icon-lizard.svg"/></div>
+                </div>
+            </div>
+
+            <div class="outertoken outer-green scale" *ngIf="playerPick == 4">
+                <div class="front">
+                    <div class="icon"><img  alt="Spock" class="tokenImg" src="./../../../assets/images/icon-spock.svg"/></div>
+                </div>
+            </div>            
+
+        </div>
+        <div class="endstate">
+            <div class="end" *ngIf="showRestart">
+                <div *ngIf="winState == 0">DRAW!</div>
+                <div *ngIf="winState == 1">YOU WIN</div>
+                <div *ngIf="winState == 2">YOU LOSE</div>
+                
+                <div class="playagain" (click)="returnToGame()">PLAY AGAIN</div>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="player">THE HOUSE PICKED</div>
+            <div class="background" *ngIf="winState == 2"></div>
+            <div class="token" *ngIf="computerPick === -1"></div>
+            <div class="outertoken outer-red scale"  *ngIf="computerPick == 0">
+                <div class="front">
+                    <div class="icon"><img  alt="Rock" class="tokenImg" src="./../../../assets/images/icon-rock.svg"/></div>
+                </div>
+            </div>  
+
+            <div class="outertoken outer-blue scale" *ngIf="computerPick == 1">
+                <div class="front">
+                    <div class="icon"><img  alt="Paper" class="tokenImg" src="./../../../assets/images/icon-paper.svg"/></div>
+                </div>
+            </div>
+        
+            <div class="outertoken outer-yellow scale" *ngIf="computerPick == 2">
+                <div class="front">
+                    <div class="icon"><img  alt="Scissors" class="tokenImg" src="./../../../assets/images/icon-scissors.svg"/></div>
+                </div>
+            </div> 
+            
+            <div class="outertoken outer-purple scale" *ngIf="computerPick == 3">
+                <div class="front">
+                    <div class="icon"><img  alt="Lizard" class="tokenImg" src="./../../../assets/images/icon-lizard.svg"/></div>
+                </div>
+            </div>
+
+            <div class="outertoken outer-green scale" *ngIf="computerPick == 4">
+                <div class="front">
+                    <div class="icon"><img  alt="Spock" class="tokenImg" src="./../../../assets/images/icon-spock.svg"/></div>
+                </div>
+            </div>              
+        </div>
+    </div>
+</div>

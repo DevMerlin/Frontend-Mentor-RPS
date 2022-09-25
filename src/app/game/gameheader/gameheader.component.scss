@@ -1,0 +1,57 @@
+.gamehead {
+    display: flex;
+    width: 520px;
+    padding: 15px;
+    flex-basis: 520px;
+    border-radius: 15px;
+    border: #CCC 1px solid;
+    justify-content: space-between;
+    z-index: 20;
+
+    .logo {
+        width: 95px;
+        height: auto;
+    }
+
+    .logols {
+        width: 100px;
+        height: auto;
+    }    
+    
+    .score {
+        display: flex;
+        align-items: center;
+        background: rgb(243, 243, 243);
+        border-radius: 8px;
+        color: rgb(68, 68, 68);
+        padding: 20px 42px;
+        text-align: center;
+        font-size: 3rem;
+        z-index: 1;
+        
+        .scoreblip {
+            font-size: 1.2rem;
+            color: rgb(7, 4, 159);
+        }
+    }    
+}
+
+@media only screen and (max-width: 480px) and (min-width: 300px) {
+    .gamehead {
+        width: 310px;
+        flex-basis: 310px;
+        font-size: 1.70rem;
+
+        .logols {
+            font-size: 1rem;
+        }        
+
+        .score {
+            font-size: 2rem;
+            
+            .scoreblip {
+                font-size: 0.7rem;
+            }
+        }          
+    }
+}

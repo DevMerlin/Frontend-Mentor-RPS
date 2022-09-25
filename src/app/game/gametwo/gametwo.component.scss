@@ -1,0 +1,85 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base {
+    position: relative;
+    margin-top: 95px;
+    width: 300px;
+}
+
+.field {
+    position: absolute;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+}
+
+.rock {
+    top: calc(0% + 210px);
+    left: 55%;
+}
+
+.paper {
+    top: 50px;
+    left: 75%;
+}
+
+.scissors {
+    top: -50px;
+    left: 28%;
+}
+
+.spock {
+    top: 50px;
+    right: 75%;
+}
+
+.lizard {
+    top: calc(0% + 210px);
+    right: 55%;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 300px) {
+    .base {
+        position: relative;
+        margin-top: 95px;
+        width: 230px;
+    }
+
+    .rock {
+        transform: scale(0.75);
+        top: calc(0% + 160px);
+        left: 50%;        
+    }
+    
+    .paper {
+        transform: scale(0.75);
+        top: 30px;
+        left: 70%;        
+    }
+    
+    .scissors {
+        transform: scale(0.75);
+        top: -60px;
+        left: 21%;        
+    }
+    
+    .spock {
+        transform: scale(0.75);
+        top: 30px;
+        right: 70%;        
+    }
+    
+    .lizard {
+        transform: scale(0.75);
+        top: calc(0% + 160px);
+        right: 50%;        
+    }
+    
+
+}

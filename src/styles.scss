@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('./app/normalize.scss');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;800&display=swap');
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+html, body {
+    display: flex;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(31,55,86);
+    background: radial-gradient(circle, rgba(31,55,86,1) 0%, rgba(20,21,57,1) 100%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #FFF;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header, main, footer {
+    flex-shrink: 0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    background: #1A2748;
+    padding: 10px;
+    margin: 5px;
+    border: #324576 1px solid;
+    border-radius: 8px; 
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        color: rgb(255, 255, 255) !important;
+    }  
+    
+    &:active {
+        color: rgb(255, 255, 255) !important;
+    }        
+}
+
+.header {
+    display: flex;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.abs {
+    position: absolute;
+}
+
+.outertoken {
+    display: flex;
+    perspective: 125px;
+    align-items: center;
+    justify-content: center;  
+    cursor: pointer;
+    width: 135px;
+    height: 135px; 
+    transition: all .2s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    z-index: 10;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(242,242,242);
+    -webkit-box-shadow: inset 1px 5px 2px -1px rgba(0,0,0,0.18); 
+    box-shadow: inset 1px 5px 2px -1px rgba(0,0,0,0.18);
+    border: rgb(133, 133, 133) solid 1px;
+    z-index: 1;
+}
+
+.outer-red {
+    background: rgb(210,32,32);
+    background: radial-gradient(circle, rgba(210,32,32,1) 0%, rgba(221,64,93,1) 100%); 
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 6px 0px 0px #840202; 
+    box-shadow: 0px 6px 0px 0px #840202;    
+}
+
+.outer-green {
+    background: rgb(64,185,206);
+    background: radial-gradient(circle, rgba(64,185,206,1) 0%, rgba(82,190,209,1) 100%); 
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 6px 0px 0px #1a99af; 
+    box-shadow: 0px 6px 0px 0px #1a99af;    
+}
+
+.outer-purple {
+    background: rgb(131,79,227);
+    background: radial-gradient(circle, rgba(131,79,227,1) 0%, rgba(140,93,229,1) 100%); 
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 6px 0px 0px #6735c4; 
+    box-shadow: 0px 6px 0px 0px #6735c4;    
+}
+
+.outer-blue {
+    background: rgb(72,101,244);
+    background: radial-gradient(circle, rgba(72,101,244,1) 0%, rgba(86,113,245,1) 100%); 
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 6px 0px 0px #181c9a; 
+    box-shadow: 0px 6px 0px 0px #181c9a;      
+}
+
+.outer-yellow {
+    background: rgb(236,158,14);
+    background: radial-gradient(circle, rgba(236,158,14,1) 0%, rgba(236,169,34,1) 100%); 
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 6px 0px 0px #c89302; 
+    box-shadow: 0px 6px 0px 0px #c89302;   
+}
+
+.tokenImg {
+    width: 45px;
+    height: auto;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

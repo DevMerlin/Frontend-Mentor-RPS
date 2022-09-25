@@ -1,0 +1,33 @@
+.gamebody {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;   
+    flex-grow: 1; 
+    z-index: 1;
+}
+
+.hn {
+    min-height: calc(100vh - 190px);
+}
+
+.hb {
+    min-height: calc(100vh - 190px);
+}
+
+.stateCheck {
+    position: relative;
+    
+    text-align: center;
+    font-size: 24px;
+    height: 28px;
+}
+
+.stNorm {
+    top: -100px;
+}
+
+.stBon {
+    top: -20px;
+}
