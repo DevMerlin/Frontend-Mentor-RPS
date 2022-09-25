@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { GameService } from 'src/app/system/game.service';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-state',
@@ -24,7 +25,7 @@ export class StateComponent implements OnInit {
   mode: number = 0;
 
 
-  constructor(private gameService: GameService, private router: Router) { }
+  constructor(private gameService: GameService, private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
     this.playerPick = -1;
@@ -72,6 +73,7 @@ export class StateComponent implements OnInit {
       console.log("The Player Won");
       this.winState = 1;
       this.gameService.updateScore();
+      this.cookieService.set("score", this.gameService._Score.toString());
     }
 
     this.showRestart = true;

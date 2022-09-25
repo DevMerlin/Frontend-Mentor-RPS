@@ -14,6 +14,7 @@ import { StateComponent } from './game/state/state.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FooterComponent } from './game/footer/footer.component';
 import { GameComponent } from './game/game/game.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { GameComponent } from './game/game/game.component';
     BrowserAnimationsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

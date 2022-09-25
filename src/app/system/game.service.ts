@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 //@ts-ignore
 import { BehaviorSubject, Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +13,19 @@ export class GameService {
   private scoreStorage: BehaviorSubject<number> = new BehaviorSubject(0);
   private lastPlayerName: BehaviorSubject<string> = new BehaviorSubject("");
   private state: BehaviorSubject<any> = new BehaviorSubject("");
-
   private mode: BehaviorSubject<number> = new BehaviorSubject(0);
+
+  // Public Score Access //
+  public _Score: number = 0;
 
   public readonly score: Observable<number> = this.scoreStorage.asObservable();
   public readonly AIPick: Observable<number> = this.AIPickStorage.asObservable();
   public readonly playerPick: Observable<number> = this.playerPickStorage.asObservable();
   public readonly playerName: Observable<string> = this.lastPlayerName.asObservable();
   public readonly stateUpdate: Observable<any> = this.state.asObservable();
-
   public readonly modeUpdate: Observable<number> = this.mode.asObservable();
 
+  // Compare all possibilities for a winning or losing match
   matches: any[] = [
     {element: "rock",     id: 0, beats: [3, 2]},
     {element: "paper",    id: 1, beats: [4, 0]}, 
@@ -31,8 +34,7 @@ export class GameService {
     {element: "spock",    id: 4, beats: [2, 0]}
   ]; 
 
-  constructor() { }
-
+  // Save the current mode of the game //
   updateMode(gameMode: number = 0)
   {
     this.mode.next(gameMode);
@@ -41,18 +43,24 @@ export class GameService {
   // Update the player score when called
   updateScore(increase: boolean = true)
   {
+    let curScore = this.scoreStorage.value;
+
     if (increase)
     {
-      let curScore = this.scoreStorage.value;
       curScore++;
-
-      this.scoreStorage.next(curScore);
     } else {
-      let curScore = this.scoreStorage.value;
       curScore--;
-
-      this.scoreStorage.next(curScore);
     }
+
+    this.scoreStorage.next(curScore);
+    this._Score = curScore;
+  }
+
+  // Set the score directly - used for loading mainly
+  setScore(score: number = 0)
+  {
+    this.scoreStorage.next(score);
+    this._Score = score;
   }
 
   updateState(status: any)
@@ -74,8 +82,6 @@ export class GameService {
 
     if (choices !== null || choiceArray.length == 0)
     {
-      if (mode === 0)
-      {
         // Rock Paper Scissors //
         // Randomly decide to pick the opposite or a random choice //
         if (Math.random() < 0.25)
@@ -100,9 +106,6 @@ export class GameService {
 
         this.AIPickStorage.next(selected);
         return true;
-      } switch (mode === 1) {
-        // Lizard Spock //
-      }
     }
 
     return false;
