@@ -82,9 +82,10 @@ export class GameService {
 
     if (choices !== null || choiceArray.length == 0)
     {
+         let opposites = [];
         // Rock Paper Scissors //
         // Randomly decide to pick the opposite or a random choice //
-        if (Math.random() < 0.25)
+        if (Math.random() < 0.35)
         {
           // Pick the Opposite //
           switch(playerChoice)
@@ -98,6 +99,14 @@ export class GameService {
             case 2:
               selected = 1;
               break;
+            case 3:
+              opposites = [0, 2];
+              selected = opposites[Math.floor(Math.random() * opposites.length)];
+            break;
+            case 4:
+              opposites = [1, 3];
+              selected = opposites[Math.floor(Math.random() * opposites.length)];
+            break;
           }
         } else {
           // Pick a Random //
